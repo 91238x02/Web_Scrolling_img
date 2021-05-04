@@ -3,7 +3,7 @@
 
 # ### Google
 
-# In[2]:
+# In[1]:
 
 
 ### Google
@@ -38,6 +38,7 @@ import time
 ##### Path ######################################################################
 Chromedriver_PATH = 'c:\\chromedriver\\chromedriver.exe'  # Chromedriver PATH 
 save_path = 'E:\\images\\google\\'  #save_path 
+#save_path = 'd:\\images\\google\\'  #save_path 
 #################################################################################
 
 
@@ -79,7 +80,7 @@ def fetch_detail_url():  #save src to local  #changing save_path : Go to the top
 
 ## Scrolling & Parsing
 params=[]
-for i in range(scroll_cnt):
+for i in range(5):
     html = driver.page_source  #get source         
     soup = BeautifulSoup(html, "lxml") 
     params = fetch_list_url()  #save the img_url to params
@@ -89,15 +90,18 @@ for i in range(scroll_cnt):
 
 ## Addtitional scrolling ('more results')
 if scroll_cnt > 5:
-    driver.find_element_by_xpath("//*[@class='mye4qd']").click()  #click 'more results'
-    for i in range(scroll_cnt-5):
-        html = driver.page_source  #get source         
-        soup = BeautifulSoup(html, "lxml") 
-        params = fetch_list_url()  #save the img_url to params
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")  #scroll
-        time.sleep(scrolltime)
+    try : 
+        driver.find_element_by_xpath("//*[@class='mye4qd']").click()  #click 'more results'
+        for i in range(scroll_cnt-5):
+            html = driver.page_source  #get source         
+            soup = BeautifulSoup(html, "lxml") 
+            params = fetch_list_url()  #save the img_url to params
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")  #scroll
+            time.sleep(scrolltime)
+    except :
+        print("Results are too short than requested scroll_cnt")
+        
     
-
 ## Save imgs
 print('')
 print("Overlaped srcs : ", len(params))
@@ -106,5 +110,5 @@ fetch_detail_url()  #save img
 print("Non_Overlap srcs : ", len(params))
 
 
-driver.close()  #close browser
+driver.close()  #close browser 
 

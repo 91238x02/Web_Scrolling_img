@@ -73,7 +73,7 @@ def fetch_list_url():  #parsing src url
 
 def fetch_detail_url():  #save src to local  #changing save_path : Go to the top of this page (Path)
     for idx,p in enumerate(params,1):  #enumerate idx option 1 : get start index from 1 (default=0)
-        urllib.request.urlretrieve(p, save_path + Search_Tag + '_' + str(idx) + ".jpg")
+        urllib.request.urlretrieve(p, save_path + Search_Tag + '_' + str(idx) + "_bing" + ".jpg")
 ###########################################################################################################    
 
 

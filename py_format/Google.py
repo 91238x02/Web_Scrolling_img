@@ -9,6 +9,7 @@
 ### Google
 """Before execute code below, check out your kernel or jupyter notebook kernel environment 
 If you have problem, just copy this code and paste to yout jupyter notebook (recommended)
+Also, before execute this page, execute this first >> "Get Chrome driver & dir setting.ipynb"
 
 browser must be pop up on the screen : if the browser is in a state of minimization, results may go bad
 (It does not matter covering the page with other page like jupyternotebook >> you can do other works)
@@ -36,9 +37,8 @@ import time
 
 
 ##### Path ######################################################################
-Chromedriver_PATH = 'c:\\chromedriver\\chromedriver.exe'  # Chromedriver PATH 
-save_path = 'E:\\images\\google\\'  #save_path 
-#save_path = 'd:\\images\\google\\'  #save_path 
+Chromedriver_PATH = 'c:\\chrome_webdriver\\chromedriver.exe'  # Chromedriver PATH 
+save_path = 'd:\\images\\google\\'  #save_path 
 #################################################################################
 
 
@@ -80,7 +80,7 @@ def fetch_detail_url():  #save src to local  #changing save_path : Go to the top
 
 ## Scrolling & Parsing
 params=[]
-for i in range(5):
+for i in range(7):
     html = driver.page_source  #get source         
     soup = BeautifulSoup(html, "lxml") 
     params = fetch_list_url()  #save the img_url to params
@@ -110,5 +110,5 @@ fetch_detail_url()  #save img
 print("Non_Overlap srcs : ", len(params))
 
 
-driver.close()  #close browser 
+driver.close()  #close browser 7
 

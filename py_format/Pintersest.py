@@ -10,6 +10,7 @@
 
 """Before execute code below, check out your kernel or jupyter notebook kernel environment 
 If you have problem, just copy this code and paste to yout jupyter notebook (recommended)
+Also, before execute this page, execute this first >> "Get Chrome driver & dir setting.ipynb"
 
 You must login with Pinterest Account ---> You Can't login with google account.
 I try to login with google, i don't have solution with new browser pop up issue.
@@ -41,8 +42,8 @@ import getpass
 
 
 ##### Path ######################################################################
-Chromedriver_PATH = 'c:\\chromedriver\\chromedriver.exe'  # Chromedriver PATH 
-save_path = 'E:\\images\\pinterest\\'  #save_path 
+Chromedriver_PATH = 'c:\\chrome_webdriver\\chromedriver.exe'  # Chromedriver PATH 
+save_path = 'D:\\images\\pinterest\\'  #save_path 
 #################################################################################
 
 
@@ -126,5 +127,5 @@ fetch_detail_url()  #save img
 print("Non_Overlap srcs : ", len(params))
 
 
-driver.close()  #close browser
+driver.close()  #close browser 
 

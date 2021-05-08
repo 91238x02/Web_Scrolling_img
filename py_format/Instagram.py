@@ -9,6 +9,7 @@
 ### Instagram scrolling 
 """Before execute code below, check out your kernel or jupyter notebook kernel environment 
 If you have problem, just copy this code and paste to yout jupyter notebook (recommended)
+Also, before execute this page, execute this first >> "Get Chrome driver & dir setting.ipynb"
 
 This code find first pop up tag list : when you enter the tag like "#apple", code chooses the first recommanded tag
 So, before execute the code, check out what is the first pop up tag for accurate img scrolling.
@@ -43,8 +44,8 @@ import getpass
 
 
 ##### Path ######################################################################
-Chromedriver_PATH = 'c:\\chromedriver\\chromedriver.exe'  # Chromedriver PATH 
-save_path = 'E:\\images\\instagram\\'  #save_path 
+Chromedriver_PATH = 'c:\\chrome_webdriver\\chromedriver.exe'  # Chromedriver PATH 
+save_path = 'D:\\images\\instagram\\'  #save_path 
 #################################################################################
 
 

@@ -60,7 +60,8 @@ temp1.close()
 # In[11]:
 
 
-get_ipython().run_line_magic('cd', 'd:/  # if you wanna change dir, just change d >> c or something else')
+# if you wanna change dir, just change d >> c or something else
+get_ipython().run_line_magic('cd', 'd:/')
 
 
 # In[13]:

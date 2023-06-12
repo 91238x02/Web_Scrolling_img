@@ -1,7 +1,5 @@
-For UniWill content
-
 # Web_Scrolling_img  
-Web Scrolling(img) by Python  
+For UniWill content
 
 main scripts are in "ipynb_format(main)" directory.  
 If you don't have chromedriver, execute "Get Chrome driver & dir setting" first.   
